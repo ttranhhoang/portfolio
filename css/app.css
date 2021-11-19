@@ -389,7 +389,7 @@ input:checked + .slider:before {
   width: 100%;
   min-height: 90vh;
   position: relative;
-  background-image: url(/images/anh1.jpg);
+  background-image: url(../images/anh1.jpg);
   background-position: center;
   background-size: cover;
   display: flex;
