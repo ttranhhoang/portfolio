@@ -1,0 +1,43 @@
+.heading_title {
+  text-align: center;
+  letter-spacing: 6px;
+  font-size: 30px;
+  padding: 15px 0;
+}
+.page-section {
+  margin: 30px 0;
+}
+hr.divider {
+  height: 0.2rem;
+  margin: 15px auto;
+  max-width: 5rem;
+  background-color: $clr-pink-light;
+  border-width: inherit;
+}
+.icon {
+  color: var(--color);
+}
+@media screen and (max-width: 767px) {
+  .heading_title {
+    font-size: 25px;
+    padding: 10px 0;
+    letter-spacing: 3px;
+  }
+  hr.divider {
+    margin: 5px auto;
+  }
+  .page-section {
+    margin: 15px 0;
+  }
+}
+
+.space {
+  margin-top: 20px;
+}
+
+// h2 {
+//   @media screen and (min-width: 767px) {
+//     font-size: 3em;
+//   }
+
+// }

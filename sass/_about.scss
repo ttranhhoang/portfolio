@@ -1,0 +1,35 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 30px;
+  padding: 40px;
+  &_content {
+    & h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    font-size: 18px;
+    & > p {
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    & > p::first-letter {
+      margin-left: 20px;
+    }
+  }
+  &_img {
+    object-fit: cover;
+  }
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    padding: 20px;
+    &_content {
+      font-size: 15px;
+      margin-bottom: 10px;
+      & h3 {
+        text-align: center;
+      }
+    }
+  }
+}

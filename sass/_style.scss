@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto:400,700&display=swap");
+@import "variables";
+:root {
+  --white: white;
+  --color: black;
+}
+[data-theme="dark"] {
+  --white: black;
+  --color: white;
+}
+body {
+  min-height: 100vh;
+  font-family: $ff-secondary;
+  background: var(--white);
+
+  color: var(--color);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  &.menu-active {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+@mixin navbarScrolled {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: var(--white);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  &.navbar-scrolled {
+    @include navbarScrolled;
+  }
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  &_title {
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  // &-links {
+  //   height: 0;
+  //   overflow: hidden;
+  //   transition: $transition;
+  // }
+  // &-link {
+  //   color: $clr-grey-8;
+  //   padding: 0.5rem 1rem;
+  //   display: block;
+  //   letter-spacing: $spacing;
+  //   text-transform: uppercase;
+  //   font-weight: bold;
+  //   font-size: 1rem;
+  //   transition: all 0.2s ease-out;
+  //   &:hover {
+  //     color: blue;
+  //   }
+  // }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    box-shadow: none;
+    background-color: transparent;
+
+    &.navbar-scrolled {
+      @include navbarScrolled;
+
+      & .menu-link {
+        color: var(--color);
+      }
+    }
+    &-center {
+      max-width: 1170px;
+      margin: 0 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.3rem;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .navbar-scrolled {
+    & .menu-toggle span {
+      background-color: var(--color);
+    }
+  }
+  .navbar_header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+// navbar social
+.navbar_social {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+.navbar_social.is-active {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}

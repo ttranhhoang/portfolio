@@ -1,0 +1,176 @@
+// transition luôn dùng để bao bọc thẻ cần transition
+// vd :hover :focus....
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 0 40px;
+  &-link {
+    color: $clr-white;
+    font-size: 18px;
+    transition: all 0.2s linear;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  &-link:hover {
+    color: $clr-grey-2;
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 767px) {
+    position: fixed;
+    top: 0;
+    left: -60%;
+    bottom: 0;
+    background: $clr-grey-3;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 70px;
+    transition: all 0.5s ease;
+    &.is-active {
+      left: 0;
+    }
+
+    &.is-active .menu-item {
+      animation: slideLeft 1s ease forwards;
+      animation-delay: -0.5s;
+      &:nth-child(2) {
+        animation-delay: -0.4s;
+      }
+      &:nth-child(3) {
+        animation-delay: -0.3s;
+      }
+      &:nth-child(4) {
+        animation-delay: -0.2s;
+      }
+      &:nth-child(5) {
+        animation-delay: -0.1s;
+      }
+    }
+    &-item {
+      width: 100%;
+      transition: all 0.2s linear;
+      transform: translateX(-100%);
+    }
+    &-link {
+      display: block;
+      padding: 15px 20px;
+      text-align: left;
+      color: white;
+      text-transform: capitalize;
+      font-size: 20px;
+    }
+    &-toggle {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      left: 20px;
+      cursor: pointer;
+      z-index: 2;
+    }
+    &-toggle span {
+      display: block;
+      height: 4px;
+      width: 30px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: $clr-white;
+      transform: translate(-50%, -50%);
+      transition: 0.5s;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    }
+    &-toggle span:nth-child(1) {
+      transform: translate(-50%, -50%) translateY(-10px);
+      transition: 0.2s;
+    }
+    &-toggle span:nth-child(4) {
+      transform: translate(-50%, -50%) translateY(10px);
+      transition: 0.2s;
+    }
+    &-toggle.is-active span:nth-child(1) {
+      transform: translate(-50%, -50%) translateY(-35px);
+      opacity: 0;
+    }
+    &-toggle.is-active span:nth-child(4) {
+      transform: translate(-50%, -50%) translateY(35px);
+      opacity: 0;
+    }
+
+    &-toggle.is-active span:nth-child(2) {
+      transform: translate(-50%, -50%) rotate(-45deg);
+      transition-delay: 0.2s;
+    }
+    &-toggle.is-active span:nth-child(3) {
+      transform: translate(-50%, -50%) rotate(45deg);
+      transition-delay: 0.2s;
+    }
+  }
+}
+@keyframes slideLeft {
+  to {
+    transform: translate(0, 0);
+  }
+}
+// Active link
+.menu li a.menu-link.active {
+  color: red;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  // position: absolute;
+  // top: 10px;
+  // right: 10px;
+  z-index: 1000;
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+.theme-switch input {
+  display: none;
+}
+.slider {
+  background-color: #999;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+.slider:before {
+  background-color: white;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+input:checked + .slider {
+  background-color: #eee;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background: black;
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+  @media screen and (max-width: 767px) {
+    .theme-switch-wrapper{
+      position:absolute;
+      top: 15px;
+      right:10px;
+    }
+  }

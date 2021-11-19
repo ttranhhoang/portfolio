@@ -1,0 +1,119 @@
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0 30px;
+  padding: 30px;
+  &_social {
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
+  }
+  &_heading {
+    color: black;
+    font-size: 35px;
+    padding: 20px;
+    font-weight: 900;
+  }
+  &_item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 30px;
+
+    width: 90%;
+    padding: 10px 20px;
+
+    border-bottom: 1px solid pink;
+
+    // box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    &:last-child {
+      border: none;
+    }
+  }
+  &_icon {
+    font-size: 30px;
+    color: pink;
+  }
+  &_info {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: $clr-black;
+
+    &-text {
+      line-height: 2rem;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    &-textgrey {
+      color: $clr-grey-6;
+    }
+  }
+}
+.form {
+  &_contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & form {
+      width: 100%;
+    }
+  }
+  &_row {
+    display: flex;
+    width: 100%;
+  }
+  &_control {
+    width: 97%;
+    text-align: center;
+    margin: 10px;
+    &.btn {
+      display: flex;
+      justify-content: flex-end;
+    }
+    & input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      background: $clr-grey-9;
+      color: $clr-black;
+      font-size: 16px;
+      font-family: $ff-secondary;
+      border: none;
+      resize: none;
+    }
+    & input[type="submit"] {
+      //width: 100%;
+      background: $clr-grey-6;
+      font-size: 16px;
+
+      font-weight: 700;
+      font-family: $ff-secondary;
+      padding: 10px 30px;
+
+      letter-spacing: 2px;
+      display: inline-block;
+      cursor: pointer;
+      border: none;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact {
+    grid-template-columns: 1fr;
+    &_social{
+      margin-bottom: 20px;
+    }
+    &_heading{
+      padding: 10px;
+      font-size:20px;
+      text-align: center;
+    }
+  }
+  .form {
+    &_control{
+      width: 94%;
+    }
+  }
+}

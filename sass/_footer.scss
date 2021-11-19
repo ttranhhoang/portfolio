@@ -1,0 +1,28 @@
+.footer {
+  max-width: 1260px;
+  //min-height: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+
+  margin-top: 30px;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // grid-gap: 34px;
+
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 1px;
+
+  &_text {
+    color: var(--color);
+    & span {
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+  // @media screen  and (max-width: 414px) {
+  //   min-height: 150px;
+  // }
+  
+}
