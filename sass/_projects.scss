@@ -27,7 +27,7 @@
     // bottom:0;
     // visibility: hidden;
   }
-  &_name{
+  &_name {
     color: var(--color);
   }
   &_name:hover {
@@ -94,6 +94,11 @@
     &_list {
       grid-template-columns: 1fr;
       padding: 20px;
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    &_img {
+      height: 302px;
     }
   }
 }
