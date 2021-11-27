@@ -19,7 +19,7 @@
     }
   }
   &_img {
-    height: 240px;
+    min-height: 240px;
     object-fit: cover;
   }
   @media screen and (max-width: 767px) {
