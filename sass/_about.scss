@@ -19,7 +19,7 @@
     }
   }
   &_img {
-    min-height:240px;
+    min-height: 240px;
     object-fit: cover;
   }
   @media screen and (max-width: 767px) {
@@ -31,6 +31,11 @@
       & h3 {
         text-align: center;
       }
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    &_img {
+      height: 302px;
     }
   }
 }
