@@ -475,7 +475,6 @@ input:checked + .slider:before {
   margin-left: 20px;
 }
 .about_img {
-  min-height: 240px;
   object-fit: cover;
 }
 @media screen and (max-width: 767px) {
