@@ -389,7 +389,7 @@ input:checked + .slider:before {
   width: 100%;
   min-height: 90vh;
   position: relative;
-  background-image: url(../images/anh1.jpg);
+  background-image: url(https://images.unsplash.com/photo-1637322831858-89c06076cfd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
   background-position: center;
   background-size: cover;
   display: flex;
@@ -475,6 +475,7 @@ input:checked + .slider:before {
   margin-left: 20px;
 }
 .about_img {
+  min-height: 240px;
   object-fit: cover;
 }
 @media screen and (max-width: 767px) {
@@ -568,6 +569,7 @@ input:checked + .slider:before {
 .projects_img {
   object-fit: cover;
   transition: all 0.5s;
+  min-height: 240px;
 }
 .projects_thumnail::before {
   content: "";

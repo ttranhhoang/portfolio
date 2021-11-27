@@ -42,6 +42,7 @@
   &_img {
     object-fit: cover;
     transition: all 0.5s;
+    min-height: 240px;
   }
   // &_btn {
   //   position: absolute;
