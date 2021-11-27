@@ -475,7 +475,7 @@ input:checked + .slider:before {
   margin-left: 20px;
 }
 .about_img {
-  min-height: 240px;
+  height: 240px;
   object-fit: cover;
 }
 @media screen and (max-width: 767px) {
@@ -569,7 +569,7 @@ input:checked + .slider:before {
 .projects_img {
   object-fit: cover;
   transition: all 0.5s;
-  min-height: 240px;
+  height: 240px;
 }
 .projects_thumnail::before {
   content: "";
@@ -595,6 +595,11 @@ input:checked + .slider:before {
   .projects_list {
     grid-template-columns: 1fr;
     padding: 20px;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .projects_img {
+    height: 307px;
   }
 }
 
