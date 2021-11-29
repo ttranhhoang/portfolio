@@ -568,7 +568,6 @@ input:checked + .slider:before {
 .projects_img {
   object-fit: cover;
   transition: all 0.5s;
-  height: 240px;
 }
 .projects_thumnail::before {
   content: "";
@@ -594,6 +593,9 @@ input:checked + .slider:before {
   .projects_list {
     grid-template-columns: 1fr;
     padding: 20px;
+  }
+  .projects_img {
+    height: 370px;
   }
 }
 @media screen and (min-width: 1023px) {

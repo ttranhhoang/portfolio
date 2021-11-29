@@ -42,7 +42,6 @@
   &_img {
     object-fit: cover;
     transition: all 0.5s;
-    height: 240px;
   }
   // &_btn {
   //   position: absolute;
@@ -94,6 +93,9 @@
     &_list {
       grid-template-columns: 1fr;
       padding: 20px;
+    }
+    &_img {
+      height: 370px;
     }
   }
   @media screen and (min-width: 1023px) {
