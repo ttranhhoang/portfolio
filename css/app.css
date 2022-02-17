@@ -531,11 +531,62 @@ input:checked + .slider:before {
   }
 }
 
+.projects {
+  position: relative;
+}
 .projects_list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0 30px;
   padding: 30px;
+}
+.projects_list .slick-arrow:hover {
+  background-color: #2cccff;
+  color: white;
+}
+.projects_list .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1;
+  z-index: 5;
+  transition: all 0.2s linear;
+}
+.projects_list .slick-arrow.slick-prev {
+  left: 0;
+}
+.projects_list .slick-arrow.slick-next {
+  right: 0;
+}
+.projects_list .slick-dots {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 0 20px;
+}
+.projects_list .slick-dots .slick-active button {
+  background-color: #2cccff;
+}
+.projects_list .slick-dots button {
+  font-size: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  transition: all 0.2s linear;
 }
 .projects_info {
   display: flex;
