@@ -531,9 +531,6 @@ input:checked + .slider:before {
   }
 }
 
-.projects {
-  position: relative;
-}
 .projects_list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -615,6 +612,7 @@ input:checked + .slider:before {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
+  margin: 0 5px;
 }
 .projects_img {
   object-fit: cover;

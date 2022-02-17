@@ -1,4 +1,6 @@
 .projects {
+
+
   &_list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -92,8 +94,6 @@
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-
-    margin: 0 5px;
   }
   &_img {
     object-fit: cover;

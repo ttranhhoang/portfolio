@@ -235,7 +235,7 @@ $(document).ready(function () {
     infinite: true,
     arrows: true,
     draggable: false,
-    
+    pad
     prevArrow: `<button type='button' class='slick-prev slick-arrow'><i class='fa fa-angle-left '></i></button>`,
     nextArrow: `<button type='button' class='slick-next slick-arrow'><i class='fa fa-angle-right '></i></button>`,
     responsive: [
